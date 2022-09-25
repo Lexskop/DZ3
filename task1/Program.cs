@@ -5,7 +5,11 @@
 12821 -> да
 23432 -> да
 */
+Console.Clear();
 Console.WriteLine("Приветствую! Эта программа поможет узнать, является ли Ваше пятизначное число палиндромом(числом, одинаково читающимся в обоих направлениях)");
+string userChoice = "y";
+while (userChoice.ToLower() == "y")
+{
 Console.WriteLine("Введите число");
 int userNumber = Convert.ToInt32(Console.ReadLine());
 while (userNumber < 10000 || userNumber > 99999)
@@ -25,3 +29,12 @@ if (userDigit2 == userDigit4 && userDigit1 == userDigit5)
     {
         Console.WriteLine($"Ваше число {userNumber} не является палиндромом");
     }
+Console.WriteLine("Вы хотите продолжить работу с программой? Да - Y, Нет - N");
+    userChoice = Console.ReadLine();
+    while (userChoice.ToLower() != "y" && userChoice.ToLower() != "n")
+    {
+    Console.WriteLine("Пожалуйста, введите верное решение. Если хотите продолжить работу - введите Y, если желаете закрыть программу - введите N");
+    userChoice = Console.ReadLine();
+    }
+}
+Console.WriteLine("Bye!");
