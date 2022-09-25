@@ -4,6 +4,7 @@
 A (3,6,8); B (2,1,-7), -> 15.84
 A (7,-5, 0); B (1,-1,9) -> 11.53
 */
+Console.WriteLine("Приветствую! Эта программа поможет узнать расстояние между двух точек в 3D пространстве");
 Console.WriteLine("Введите координаты Х1");
 int userCoordinateX1 = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите координаты Y1");
