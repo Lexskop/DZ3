@@ -17,10 +17,10 @@ while (userNumber < 10000 || userNumber > 99999)
     Console.WriteLine("Вы ввели не пятизначное число, проверьте вводимое число");
     userNumber = Convert.ToInt32(Console.ReadLine());
 }
-double userDigit4 = Math.Round(((userNumber % Math.Pow(10, 2)) - (userNumber % Math.Pow(10, 1))) / Math.Pow(10, 1));
+double userDigit4 = Math.Round(((userNumber % Math.Pow(10, 2)) - Math.Round((userNumber % Math.Pow(10, 1))))) / Math.Pow(10, 1);
 double userDigit5 = Math.Round(userNumber % Math.Pow(10, 1));
-double userDigit1 = Math.Round(userNumber / Math.Pow(10, 4));
-double userDigit2 = Math.Round(((userNumber % Math.Pow(10, 4)) - (userNumber % Math.Pow(10, 3))) / Math.Pow(10, 3));
+double userDigit1 = Math.Floor(userNumber / Math.Pow(10, 4));
+double userDigit2 = Math.Round(((userNumber % Math.Pow(10, 4)) - Math.Round((userNumber % Math.Pow(10, 3))))) / Math.Pow(10, 3);
 if (userDigit2 == userDigit4 && userDigit1 == userDigit5)
 {
     Console.WriteLine($"Ваше число {userNumber} является палиндромом");
