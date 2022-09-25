@@ -13,12 +13,14 @@ Console.WriteLine("Введите число");
 int userNumber = Convert.ToInt32(Console.ReadLine());
 int result = 1;
 double resultUser = 0;
+Console.Write($"Ваше число {userNumber} -> ");
 while (resultUser < Math.Pow(userNumber, 3))
 {
     resultUser = Math.Pow(result, 3);
     Console.Write($"{resultUser} ");
     result++;
 }
+Console.WriteLine("");
 Console.WriteLine("Вы хотите продолжить работу с программой? Да - Y, Нет - N");
     userChoice = Console.ReadLine();
     while (userChoice.ToLower() != "y" && userChoice.ToLower() != "n")
